@@ -15,10 +15,12 @@ class CheesesController < ApplicationController
   # GET /cheeses/new
   def new
     @cheese = Cheese.new
+    @all_users = User.select_users
   end
 
   # GET /cheeses/1/edit
   def edit
+    @all_users = User.select_users
   end
 
   # POST /cheeses
